@@ -1,7 +1,101 @@
-body {font-family:Arial,sans-serif;background:#f4f4f9;color:#333;margin:0;padding:0;}
-header {background:#004080;color:#fff;text-align:center;padding:1em;}
-nav a {margin:0 1em;color:#fff;text-decoration:none;}
-section {max-width:800px;margin:2em auto;padding:0 1em;}
-.audio-item {margin-bottom:1.5em;}
-.audio-item h3 {margin:0.5em 0 0.2em;}
-footer {background:#004080;color:#fff;text-align:center;padding:1em;margin-top:3em;}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background: #1b1b1b;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+}
+
+.sidebar h2 { color: #1db954; }
+.sidebar nav a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 10px 0;
+}
+.sidebar nav a:hover { color: #fff; }
+
+main {
+  margin-left: 220px;
+  padding: 20px;
+  width: 100%;
+}
+
+.topbar {
+  background: #1b1b1b;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.topbar input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+h2 { color: #1db954; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #1e1e1e;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card:hover { background: #333; }
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.card h3 {
+  margin: 8px 0 4px;
+  font-size: 1em;
+}
+.card p { color: #999; font-size: 0.8em; }
+
+.player-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #333;
+}
+.player-bar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.player-info { flex: 1; }
+.player-controls button {
+  background: none;
+  color: #fff;
+  border: none;
+  font-size: 1.5em;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.player-controls button:hover { color: #1db954; }
