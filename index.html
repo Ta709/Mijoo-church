@@ -35,20 +35,24 @@
     </main>
   </div>
 
-  <!-- Bottom Player Bar -->
-  <div class="player-bar">
-    <img id="player-cover" src="covers/default.png" alt="cover">
-    <div class="player-info">
-      <h4 id="player-title">No song playing</h4>
-      <audio id="audio-player" controls></audio>
-    </div>
-    <div class="player-controls">
-      <button id="prev-btn">⏮️</button>
-      <button id="play-btn">⏯️</button>
-      <button id="next-btn">⏭️</button>
-    </div>
+<!-- Bottom Player Bar -->
+<div class="player-bar">
+  <img id="player-cover" src="covers/default.png" alt="cover">
+  <div class="player-info">
+    <h4 id="player-title">No song playing</h4>
+    <audio id="audio-player" controls></audio>
   </div>
+  <div class="player-controls">
+    <button id="prev-btn">⏮️</button>
+    <button id="play-btn">⏯️</button>
+    <button id="next-btn">⏭️</button>
+    <button id="queue-btn">📜</button>
+  </div>
+</div>
 
-  <script src="assets/script.js"></script>
-</body>
-</html>
+<!-- Queue Popup -->
+<div id="queue-popup" class="queue-popup">
+  <h3>🎶 Playback Queue</h3>
+  <ul id="queue-list"></ul>
+  <button id="close-queue">Close</button>
+</div>
